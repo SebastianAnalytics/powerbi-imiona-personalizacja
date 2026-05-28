@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Power BI Case Study | Personalizowana oferta produktów dla niemowląt</title>
+  <meta name="description" content="Portfolio Power BI: analiza popytu na personalizowane produkty dla niemowląt z imieniem, z wykorzystaniem danych publicznych o imionach nadawanych dzieciom w Polsce.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Początek strony">Power BI Case Study</a>
+    <nav class="main-nav" aria-label="Sekcje portfolio">
+      <a href="#business">Biznes</a>
+      <a href="#report">Raport</a>
+      <a href="#technical">Technicznie</a>
+      <a href="#files">Pliki</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="top" aria-label="Wprowadzenie do projektu">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Power BI | DAX | R | API | Model danych</p>
+      <h1>Planowanie personalizowanej oferty dla produktów niemowlęcych</h1>
+      <p class="hero-copy">
+        Case study dla firmy produkującej na dużą skalę personalizowane produkty dla niemowląt: kocyki, body, śliniaki i pamiątkowe akcesoria z imieniem.
+        Raport odpowiada na proste pytanie operacyjne: ile imion warto utrzymywać w katalogu, żeby dobrze pokryć popyt i nie rozbudowywać oferty bez potrzeby.
+      </p>
+      <p class="author-line">Autor: Sebastian Lewandowski</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#report">Zobacz case study</a>
+        <a class="button secondary" href="powerbi/Raport.pbix">Pobierz PBIX</a>
+      </div>
+      <dl class="hero-facts" aria-label="Najważniejsze informacje">
+        <div>
+          <dt>Zakres danych</dt>
+          <dd>2019-2025</dd>
+        </div>
+        <div>
+          <dt>Model</dt>
+          <dd>4 tabele</dd>
+        </div>
+        <div>
+          <dt>Miary DAX</dt>
+          <dd>45</dd>
+        </div>
+        <div>
+          <dt>Scenariusz</dt>
+          <dd>Katalog imion i pokrycie popytu</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <main>
+    <section class="section intro" id="business">
+      <div class="section-heading">
+        <p class="eyebrow">Perspektywa biznesowa</p>
+        <h2>Co trzeba zdecydować?</h2>
+      </div>
+      <div class="intro-grid">
+        <article class="text-block">
+          <h3>Problem</h3>
+          <p>
+            Firma oferuje produkty z nadrukowanym lub haftowanym imieniem. Każdy dodatkowy wariant w katalogu zwiększa elastyczność sprzedaży, ale też komplikuje produkcję,
+            przygotowanie wzorów, kontrolę jakości i zarządzanie wariantami. <strong>Zbyt wąska oferta</strong> ogranicza sprzedaż, a <strong>zbyt szeroka</strong> zwiększa złożoność.
+          </p>
+        </article>
+        <article class="text-block">
+          <h3>Odpowiedź</h3>
+          <p>
+            Raport pokazuje, które imiona warto uwzględnić w podstawowym katalogu, jak zmienia się ich popularność rok do roku i czy ten sam zakres oferty działa podobnie
+            w różnych województwach. Parametr <strong>Top N</strong> pozwala szybko porównać krótszy i szerszy wariant katalogu.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section band">
+      <div class="section-heading">
+        <p class="eyebrow">Założenia case study</p>
+        <h2>Jak czytać dane w tym scenariuszu</h2>
+      </div>
+      <div class="mapping-grid">
+        <article class="mapping-card">
+          <span class="card-index">01</span>
+          <h3>Wariant personalizacji</h3>
+          <p>Każde imię oznacza wariant personalizacji, który firma może dodać do katalogu produktów, szablonów nadruku lub komunikacji sprzedażowej.</p>
+        </article>
+        <article class="mapping-card">
+          <span class="card-index">02</span>
+          <h3>Skala zainteresowania</h3>
+          <p>Liczba nadań jest przybliżeniem zainteresowania danym imieniem i pozwala porównywać popularność w czasie.</p>
+        </article>
+        <article class="mapping-card">
+          <span class="card-index">03</span>
+          <h3>Różnice regionalne</h3>
+          <p>Województwa pozwalają sprawdzić, czy standardowy katalog imion dobrze pokrywa popyt w różnych częściach kraju.</p>
+        </article>
+        <article class="mapping-card">
+          <span class="card-index">04</span>
+          <h3>Zakres katalogu</h3>
+          <p>Parametr Top N pozwala porównać warianty: krótką listę najpopularniejszych imion, ofertę rozszerzoną lub szeroki katalog personalizacji.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="report">
+      <div class="section-heading split">
+        <div>
+          <p class="eyebrow">Raport Power BI</p>
+          <h2>Trzy widoki: trend, katalog, ranking</h2>
+        </div>
+        <p class="section-note">
+          Każda strona raportu odpowiada na inny etap decyzji: jak zmienia się popyt, jak szeroki katalog utrzymywać i które imiona powinny być priorytetem.
+        </p>
+      </div>
+      <div class="showcase">
+        <article class="screenshot-card wide">
+          <img src="assets/trendy.png" alt="Strona raportu Power BI z trendami kategorii imion, KPI i mapą województw">
+          <div class="caption">
+            <h3>Trendy</h3>
+            <p>Najważniejsze KPI dla wybranego roku, porównanie kategorii imion w czasie oraz mapa różnic regionalnych. Widok pomaga ocenić popyt i wskazać segmenty warte uwzględnienia poza samym rankingiem Top N.</p>
+          </div>
+        </article>
+        <article class="screenshot-card">
+          <img src="assets/planowanie-oferty.png" alt="Strona raportu Power BI pokazująca warianty szerokości oferty, stabilność i próg Top N">
+          <div class="caption">
+            <h3>Planowanie oferty</h3>
+            <p>Symulacja szerokości katalogu, stabilność składu Top N oraz strata pokrycia, jeśli oferta nie jest aktualizowana. Strona wskazuje też imiona do rozważenia przy dodaniu lub wykluczeniu z katalogu.</p>
+          </div>
+        </article>
+        <article class="screenshot-card">
+          <img src="assets/ranking-imion.png" alt="Strona raportu Power BI z rankingiem imion, koncentracją popytu i mapą Top N">
+          <div class="caption">
+            <h3>Ranking imion</h3>
+            <p>Ranking imion, udział skumulowany, zmiana r/r i regionalne pokrycie popytu dla wybranego zakresu katalogu.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section band">
+      <div class="section-heading">
+        <p class="eyebrow">Obsługa filtrów</p>
+        <h2>Czytelność po zmianie filtrów</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature">
+          <h3>Tytuły z kontekstem</h3>
+          <p>Wybrane tytuły reagują na kluczowe ustawienia raportu, takie jak próg Top N czy zakres analizy. Dzięki temu odbiorca szybciej rozumie, czego dotyczy dana wizualizacja.</p>
+        </article>
+        <article class="feature">
+          <h3>Parametr Top N</h3>
+          <p>Użytkownik może zmieniać liczbę imion w analizowanym katalogu bez przebudowy raportu. Ten sam model obsługuje warianty od krótkiej listy do szerokiej personalizacji.</p>
+        </article>
+        <article class="feature">
+          <h3>Spójne filtry</h3>
+          <p>Rok, płeć, kategoria i województwo działają wspólnie na widoki trendów, rankingu, map i wskaźników, ograniczając ryzyko błędnej interpretacji.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="technical">
+      <div class="section-heading split">
+        <div>
+          <p class="eyebrow">R | API | Power BI | DAX</p>
+          <h2>Przepływ danych i narzędzia</h2>
+        </div>
+        <p class="section-note">
+          Zakres techniczny obejmuje pobranie danych, ujednolicenie struktury, model Power BI, miary DAX i raport przygotowany do pracy z filtrami.
+        </p>
+      </div>
+      <div class="tech-flow">
+        <article>
+          <span>01</span>
+          <h3>R + API</h3>
+          <p>Skrypt w <strong>R</strong> pobiera zasoby z <strong>API dane.gov.pl</strong> i przygotowuje listę plików do przetworzenia.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>CSV i paginacja</h3>
+          <p>Dane z plików CSV oraz endpointów z paginacją są sprowadzone do jednej struktury z tymi samymi kolumnami i typami.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Power BI</h3>
+          <p>Model raportu łączy tabelę faktów z klasyfikacją imion, parametrem Top N i wydzieloną tabelą miar.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>DAX</h3>
+          <p>Miary <strong>DAX</strong> obsługują rankingi, udziały, zmiany r/r, stabilność składu i porównania między wariantami katalogu.</p>
+        </article>
+      </div>
+
+      <div class="model-block">
+        <div class="model-copy">
+          <h3>Model danych</h3>
+          <p>
+            Model ma zwartą strukturę i rozdziela dane faktowe, parametry oraz warstwę opisową. Dzięki temu raport może reagować na filtry bez duplikowania logiki
+            w poszczególnych wizualizacjach.
+          </p>
+          <ul class="plain-list">
+            <li><strong>Imiona:</strong> tabela faktów z liczbą nadań według roku, płci i województwa.</li>
+            <li><strong>Kategorie:</strong> warstwa klasyfikacji imion użyta do analizy segmentów.</li>
+            <li><strong>TopN:</strong> rozłączona tabela parametru do wyboru zakresu katalogu imion.</li>
+            <li><strong>Miary:</strong> tabela miar DAX uporządkowanych w folderach tematycznych.</li>
+          </ul>
+        </div>
+        <figure class="model-image">
+          <img src="assets/model.png" alt="Model danych Power BI z tabelami Imiona, Kategorie, TopN i Miary">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section band">
+      <div class="section-heading">
+        <p class="eyebrow">DAX</p>
+        <h2>Miary użyte w analizie oferty</h2>
+      </div>
+      <div class="measure-grid">
+        <article class="measure">
+          <h3>Ranking i Top N</h3>
+          <p>Dynamiczny ranking imion reagujący na wybrany próg N oraz filtry raportu.</p>
+        </article>
+        <article class="measure">
+          <h3>Pokrycie popytu</h3>
+          <p>Udział popytu obsługiwany przez wybrany zakres katalogu imion.</p>
+        </article>
+        <article class="measure">
+          <h3>Stabilność składu</h3>
+          <p>Ocena, ile imion utrzymuje się w wybranym zakresie Top N rok do roku.</p>
+        </article>
+        <article class="measure">
+          <h3>Zmiany r/r</h3>
+          <p>Porównanie liczby nadań, udziału i dynamiki w ujęciu liczbowym oraz procentowym.</p>
+        </article>
+        <article class="measure">
+          <h3>Kategorie</h3>
+          <p>Miary udziału kategorii oraz porównań między latami dla segmentów imion.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section files" id="files">
+      <div class="section-heading">
+        <p class="eyebrow">Materiały</p>
+        <h2>Pliki projektu</h2>
+      </div>
+      <div class="file-links">
+        <a href="powerbi/Raport.pbix">Raport Power BI (.pbix)</a>
+        <a href="source/Imiona.R">Skrypt pobierania danych (R)</a>
+        <a href="source/Dane.xlsx">Eksport miar i tabel (.xlsx)</a>
+        <a href="technical-notes.md">Notatki techniczne</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Portfolio Power BI | case study o planowaniu katalogu personalizacji na podstawie publicznych danych o imionach.</p>
+  </footer>
+</body>
+</html>
