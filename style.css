@@ -316,6 +316,22 @@ h3 {
   height: auto;
   border-bottom: 1px solid var(--line);
 }
+.video-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.portfolio-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #111827;
+  border-bottom: 1px solid var(--line);
+}
+
 
 .caption {
   padding: 26px;
