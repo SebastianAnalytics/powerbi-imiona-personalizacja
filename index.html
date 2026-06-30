@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Power BI Case Study | Personalizowana oferta produktów dla niemowląt</title>
   <meta name="description" content="Portfolio Power BI: analiza popytu na personalizowane produkty dla niemowląt z imieniem, z wykorzystaniem danych publicznych o imionach nadawanych dzieciom w Polsce.">
-  <link rel="stylesheet" href="style.css?v=20260630-2">
+  <link rel="stylesheet" href="style.css?v=20260630-3">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Początek strony">Power BI Case Study</a>
     <nav class="main-nav" aria-label="Sekcje portfolio">
       <a href="#business">Biznes</a>
+      <a href="#video">Wideo</a>
       <a href="#report">Raport</a>
       <a href="#technical">Technicznie</a>
       <a href="#files">Pliki</a>
@@ -30,6 +31,7 @@
       <p class="author-line">Autor: Sebastian Lewandowski</p>
       <div class="hero-actions">
         <a class="button primary" href="#report">Zobacz case study</a>
+        <a class="button secondary" href="#video">Obejrzyj wideo</a>
         <a class="button secondary" href="powerbi/Raport.pbix">Pobierz PBIX</a>
       </div>
       <dl class="hero-facts" aria-label="Najważniejsze informacje">
@@ -53,8 +55,25 @@
     </div>
   </section>
 
-  <main>
-    <section class="section intro" id="business">
+    <main>
+    <section class="section video-section" id="video">
+      <div class="section-heading split">
+        <div>
+          <p class="eyebrow">Wideo</p>
+          <h2>Krótki pokaz działania raportu</h2>
+        </div>
+        <p class="section-note">
+          Nagranie pokazuje raport w praktyce: przejście przez główne strony, zmianę filtrów i wykorzystanie widoków do planowania katalogu imion.
+        </p>
+      </div>
+      <div class="video-panel">
+        <video class="portfolio-video" controls preload="metadata" poster="assets/planowanie-oferty.png">
+          <source src="Video_portfolio.mp4" type="video/mp4">
+          Twoja przeglądarka nie obsługuje odtwarzania wideo. Plik można pobrać z sekcji Pliki projektu.
+        </video>
+      </div>
+    </section>
+<section class="section intro" id="business">
       <div class="section-heading">
         <p class="eyebrow">Perspektywa biznesowa</p>
         <h2>Co trzeba zdecydować?</h2>
@@ -117,16 +136,6 @@
         </p>
       </div>
       <div class="showcase">
-      <article class="video-card" aria-label="Wideo pokazujące działanie raportu Power BI">
-        <video class="portfolio-video" controls preload="metadata" poster="assets/trendy.png">
-          <source src="Video_portfolio.mp4" type="video/mp4">
-          Twoja przeglądarka nie obsługuje odtwarzania wideo. Plik można pobrać z sekcji Pliki projektu.
-        </video>
-        <div class="caption">
-          <h3>Wideo z działania raportu</h3>
-          <p>Krótki pokaz interakcji w raporcie: przejście przez główne strony, zmianę filtrów i sposób wykorzystania widoków do planowania katalogu imion.</p>
-        </div>
-      </article>
         <article class="screenshot-card">
           <img src="assets/trendy.png" alt="Strona raportu Power BI z trendami kategorii imion, KPI i mapą województw">
           <div class="caption">
