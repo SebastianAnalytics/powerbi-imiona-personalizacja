@@ -117,11 +117,16 @@
         </p>
       </div>
       <div class="showcase">
-        <article class="screenshot-card wide">
+        <article class="screenshot-card">
           <img src="assets/trendy.png" alt="Strona raportu Power BI z trendami kategorii imion, KPI i mapą województw">
           <div class="caption">
             <h3>Trendy</h3>
             <p>Najważniejsze KPI dla wybranego roku, porównanie kategorii imion w czasie oraz mapa różnic regionalnych. Widok pomaga ocenić popyt i wskazać segmenty warte uwzględnienia poza samym rankingiem Top N.</p>
+            <ul class="caption-list">
+              <li><strong>KPI:</strong> liczba nadań, zmiana r/r, liczba różnych imion i dynamika procentowa.</li>
+              <li><strong>Trend kategorii:</strong> porównanie udziałów segmentów w latach 2019-2025.</li>
+              <li><strong>Mapa:</strong> szybkie sprawdzenie, czy wybrana kategoria ma podobny udział w regionach.</li>
+            </ul>
           </div>
         </article>
         <article class="screenshot-card">
@@ -129,6 +134,11 @@
           <div class="caption">
             <h3>Planowanie oferty</h3>
             <p>Symulacja szerokości katalogu, stabilność składu Top N oraz strata pokrycia, jeśli oferta nie jest aktualizowana. Strona wskazuje też imiona do rozważenia przy dodaniu lub wykluczeniu z katalogu.</p>
+            <ul class="caption-list">
+              <li><strong>Warianty Top N:</strong> porównanie pokrycia popytu dla różnych szerokości katalogu.</li>
+              <li><strong>Stabilność:</strong> ile imion utrzymuje się w ofercie rok do roku.</li>
+              <li><strong>Lista progowa:</strong> imiona blisko granicy Top N, przydatne przy decyzji o rozszerzeniu lub ograniczeniu katalogu.</li>
+            </ul>
           </div>
         </article>
         <article class="screenshot-card">
@@ -136,6 +146,11 @@
           <div class="caption">
             <h3>Ranking imion</h3>
             <p>Ranking imion, udział skumulowany, zmiana r/r i regionalne pokrycie popytu dla wybranego zakresu katalogu.</p>
+            <ul class="caption-list">
+              <li><strong>Ranking:</strong> pozycja imienia, liczba nadań, udział i zmiana rok do roku.</li>
+              <li><strong>Koncentracja:</strong> udział Top N w całym popycie i jego zmiana w czasie.</li>
+              <li><strong>Regiony:</strong> mapa pokazująca, jak wybrany próg Top N pokrywa popyt w województwach.</li>
+            </ul>
           </div>
         </article>
       </div>
@@ -199,8 +214,8 @@
         <div class="model-copy">
           <h3>Model danych</h3>
           <p>
-            Model ma zwartą strukturę i rozdziela dane faktowe, parametry oraz warstwę opisową. Dzięki temu raport może reagować na filtry bez duplikowania logiki
-            w poszczególnych wizualizacjach.
+            Model jest celowo prosty, ponieważ projekt ma jedno główne źródło faktów: liczbę nadań imienia według roku, płci i województwa. Osobna tabela imion nie wnosiłaby tu
+            istotnych atrybutów analitycznych poza samą nazwą imienia, więc zwiększałaby liczbę relacji bez realnego uproszczenia raportu.
           </p>
           <ul class="plain-list">
             <li><strong>Imiona:</strong> tabela faktów z liczbą nadań według roku, płci i województwa.</li>
@@ -208,6 +223,10 @@
             <li><strong>TopN:</strong> rozłączona tabela parametru do wyboru zakresu katalogu imion.</li>
             <li><strong>Miary:</strong> tabela miar DAX uporządkowanych w folderach tematycznych.</li>
           </ul>
+          <p>
+            Bardziej rozbudowane modelowanie danych pokazuję w osobnym projekcie:
+            <a class="text-link" href="https://sebastiananalytics.github.io/microsoft-fabric-sales-analytics-platform/" target="_blank" rel="noopener">Microsoft Fabric Sales Analytics Platform</a>.
+          </p>
         </div>
         <figure class="model-image">
           <img src="assets/model.png" alt="Model danych Power BI z tabelami Imiona, Kategorie, TopN i Miary">

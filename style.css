@@ -299,8 +299,8 @@ h3 {
 
 .showcase {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
+  grid-template-columns: 1fr;
+  gap: 42px;
 }
 
 .screenshot-card {
@@ -311,20 +311,29 @@ h3 {
   box-shadow: var(--shadow);
 }
 
-.screenshot-card.wide {
-  grid-column: 1 / -1;
-}
-
 .screenshot-card img {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: left top;
+  height: auto;
   border-bottom: 1px solid var(--line);
 }
 
 .caption {
-  padding: 22px;
+  padding: 26px;
+}
+
+.caption-list {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.text-link {
+  color: var(--teal-dark);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .feature-grid,
@@ -474,7 +483,5 @@ h3 {
     padding-right: 16px;
   }
 
-  .screenshot-card img {
-    aspect-ratio: 4 / 3;
-  }
+
 }
