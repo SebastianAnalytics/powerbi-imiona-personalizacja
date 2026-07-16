@@ -83,7 +83,7 @@ a {
   color: #ffffff;
   background:
     linear-gradient(90deg, rgba(10, 18, 28, 0.92), rgba(10, 18, 28, 0.72) 45%, rgba(10, 18, 28, 0.36)),
-    url("assets/planowanie-oferty.png?v=20260716") center / cover no-repeat;
+    url("assets/hero-banner.png?v=20260716") center / cover no-repeat;
 }
 
 .hero-overlay {
